@@ -4,6 +4,7 @@
 [ext_resource path="res://Scenes/Spells/AOE.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
+radius = 27.0185
 
 [node name="AOE" type="Area2D"]
 script = ExtResource( 2 )
@@ -13,3 +14,5 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_AOE_body_entered"]
