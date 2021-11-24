@@ -1,12 +1,21 @@
 extends KinematicBody2D
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	$Sprite.modulate = Color(1, 0, 0)
+var color = Color(1, 1, 1)
+var velocity = Vector2(2*randf() - 1, 2*randf() - 1)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func spawn(position, color):
+	self.position = position
+	self.color = color
+	self.velocity = self.velocity.rotated(randf() - 0.5)
+	return self
+
+func _ready():
+	$Sprite.modulate = self.color
+
+func _physics_process(delta):
+	if randf() > 0.95:
+		self.velocity = self.velocity.rotated(randf() - 0.5)
+	move_and_collide(self.velocity)
 
 func hit(msg):
 	queue_free()

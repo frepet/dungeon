@@ -35,12 +35,10 @@ func _physics_process(delta):
 		rotate_towards_target(delta)
 		var collision = move_and_collide(self.direction.normalized() * self.speed * delta)
 		if collision and collision.collider.is_in_group("Hittable"):
-			print("Projectile hit a 'Hittable' node")
 			var mob = collision.collider
 			mob.hit("Hit by projectile")
 			_onHit(mob.position)
 		elif self.position.distance_to(self.target) < 32:
-			print("Projectile hit its target")
 			_onHit(self.target)
 		else:
 			self.speed = max(self.speed + self.acceleration, 64)
