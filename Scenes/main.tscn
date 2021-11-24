@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/CameraController.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Mobs/CameraController.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Mobs/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/tileset.tres" type="TileSet" id=4]
 [ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=5]
 

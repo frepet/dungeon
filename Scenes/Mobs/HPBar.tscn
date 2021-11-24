@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Mobs/HPBar.gd" type="Script" id=1]
+
+[node name="HPBar" type="Polygon2D"]
+color = Color( 0, 0.792157, 0.0509804, 1 )
+polygon = PoolVector2Array( 16, -30, -16, -30, -16, -25, 16, -25 )
+script = ExtResource( 1 )

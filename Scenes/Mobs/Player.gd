@@ -7,6 +7,9 @@ const speed_factor = 64*60 # 1 * speed_factor should move the player 1 sq/s
 export (int) var speed = 2 * speed_factor
 export (float) var rotation_speed = deg2rad(6)
 
+var hp = 100
+var maxHp = 100
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

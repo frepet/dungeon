@@ -1,6 +1,6 @@
 extends Position2D
 
-onready var mob = preload("res://Scenes/Mob.tscn")
+onready var mob = preload("res://Scenes/Mobs/Mob.tscn")
 
 var mana = 0
 var manaToSpawnMob = 100
