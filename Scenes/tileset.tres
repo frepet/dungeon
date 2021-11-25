@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=37 format=2]
+[gd_resource type="TileSet" load_steps=39 format=2]
 
 [ext_resource path="res://Sprites/tilemap.png" type="Texture" id=1]
 
@@ -74,6 +74,10 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
+[sub_resource type="NavigationPolygon" id=36]
+vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 23.2107, 24.091, 32, 15.7185, 32, 32, 15.9546, 32 )
 
@@ -125,6 +129,10 @@ points = PoolVector2Array( 16.6204, 0, 32, 0, 32, 15.8287, 23.7689, 8.37207 )
 [sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 15.6282, 0, 15.8287 )
 
+[sub_resource type="NavigationPolygon" id=37]
+vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
 [resource]
 2/name = "Dirt"
 2/texture = ExtResource( 1 )
@@ -161,7 +169,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 15.6282, 0, 15.8287 )
 3/autotile/tile_size = Vector2( 32, 32 )
 3/autotile/spacing = 0
 3/autotile/occluder_map = [  ]
-3/autotile/navpoly_map = [  ]
+3/autotile/navpoly_map = [ Vector2( 4, 1 ), SubResource( 36 ) ]
 3/autotile/priority_map = [  ]
 3/autotile/z_index_map = [  ]
 3/occluder_offset = Vector2( 0, 0 )
@@ -283,6 +291,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 15.6282, 0, 15.8287 )
 4/tile_mode = 0
 4/occluder_offset = Vector2( 0, 0 )
 4/navigation_offset = Vector2( 0, 0 )
+4/navigation = SubResource( 37 )
 4/shape_offset = Vector2( 0, 0 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 4/shape_one_way = false

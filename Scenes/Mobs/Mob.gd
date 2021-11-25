@@ -18,7 +18,7 @@ func _ready():
 func _physics_process(delta):
 	if self.hp <= 0:
 		queue_free()
-	move_and_collide(self.velocity * delta)
+	#move_and_collide(self.velocity * delta)
 
 func hit(msg):
 	self.hp -= 25
