@@ -13,6 +13,7 @@ script = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.784314 )
 texture = ExtResource( 1 )
 
 [connection signal="body_entered" from="." to="." method="_on_AOE_body_entered"]
