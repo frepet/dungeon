@@ -1,7 +1,8 @@
 extends KinematicBody2D
+class_name Mob
 
-var color = Color(1, 1, 1)
 var velocity = Vector2(2*randf() - 1, 2*randf() - 1)
+var color = Color(1, 1, 1)
 
 var hp = 100
 var maxHp = 100
@@ -24,5 +25,3 @@ func _physics_process(delta):
 
 func hit(msg):
 	self.hp -= 25
-	
-	
